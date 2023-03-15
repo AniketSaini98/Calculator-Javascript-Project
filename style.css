@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: dark light;
+}
+
+/*============== Main Container ======================*/
+
+.calculator {
+  margin: 15vh auto;
+  background-color: #5a5858;
+  width: 350px;
+  height: 450px;
+  border-radius: 0.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  box-shadow: 0 0 6px black;
+  transform: scale(1.2);
+}
+
+/*================== Main Title ================================*/
+
+#title {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 7px;
+}
+
+#title h2 {
+  padding: 1rem 6.1rem;
+  border-radius: 0.4rem;
+  color: #000;
+  font-family: system-ui;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+
+  /* Created with https://www.css-gradient.com */
+  background: rgba(227, 85, 53, 1);
+  background: -webkit-linear-gradient(
+    top right,
+    rgba(227, 85, 53, 1),
+    rgba(226, 10, 201, 1)
+  );
+  background: -moz-linear-gradient(
+    top right,
+    rgba(227, 85, 53, 1),
+    rgba(226, 10, 201, 1)
+  );
+  background: linear-gradient(
+    to bottom left,
+    rgba(227, 85, 53, 1),
+    rgba(226, 10, 201, 1)
+  );
+}
+
+
+/*===================== Display Section ==========================*/
+
+#display {
+  width: 96%;
+  height: 80px;
+  margin: 5px;
+  color: white;
+  background-color: #2f2f33;
+  font-family: sans-serif;
+  font-size: 2.3rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  text-align: right;
+  padding: 25px 10px 2px 2px;
+}
+
+
+/* ===================== Button Section ============================ */
+
+#button-box {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px 1px 5px 7px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  height: 55px;
+  width: 24%;
+  margin: 1px;
+  border: 1px solid #1d1f25b6;
+  border-radius: 0.4rem;
+  background-color: #1d1f25b6;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.buttons:hover {
+  background-color: #7b7878;
+  box-shadow: 0 0 8px black;
+}
+
+/* Button with Value 0 has a bigger width */
+
+.buttons[data-value="0"] {
+  width: 48.5%;
+  border-bottom-left-radius: 0.4rem;
+}
+
+.buttons[data-value="0"]:hover {
+  background-color: #4195b1;
+}
+
+/* Arithmatic Operators have a separate background color  */
+.buttons[data-value="reset"]:hover {
+  background-color: red;
+}
+
+.buttons[data-value="0"]:hover {
+  background-color: #4195b1;
+}
+
+.buttons[data-value="="] {
+  background-color: #4195b1;
+  border-bottom-right-radius: 0.4rem;
+}
+
+.buttons[data-value="*"] {
+  background-color: #4195b1;
+}
+
+.buttons[data-value="-"] {
+  background-color: #4195b1;
+}
+
+.buttons[data-value="+"] {
+  background-color: #4195b1;
+}
+
+.buttons[data-value="/"] {
+  background-color: #4195b1;
+  border-bottom-right-radius: 0.4rem;
+}
+
+.buttons:hover,
+.buttons[data-value="="]:hover {
+  background-color: #000;
+}
+
+.buttons:nth-child(4n + 4):hover,
+.buttons[data-value="="]:hover {
+  background-color: red;
+}
